@@ -65,8 +65,7 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                             $nom = ($noPage - 1) * $dataPerPage + 1;
                         }
 
-                        $query = mysql_query("SELECT * FROM `users` WHERE username NOT LIKE '%$_SESSION[username]' AND username NOT LIKE
-                            '%superadmin' AND status NOT LIKE '%Superadmin' ORDER BY id_users DESC LIMIT $offset, $dataPerPage");
+                        $query = mysql_query("SELECT * FROM `sosmed` ORDER BY id_sosmed DESC LIMIT $offset, $dataPerPage");
 
                         //loop through fetched data
                         $paging = mysql_num_rows($query);
@@ -77,7 +76,7 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                             <div class="alert alert-warning">
                                 <h4>There's No Data Here</h4>
                                 <p>To fill a new user click the button below</p>
-                                <p><button onClick="document.location = 'addUser.php';" class="btn btn-info"><span class="glyphicon glyphicon-plus"></span> Add New User</button></p>
+                                <p><button onClick="document.location = 'addSosmed.php';" class="btn btn-info"><span class="glyphicon glyphicon-plus"></span> Add New Sosmed</button></p>
                             </div>
                             <?php
                         }
@@ -87,7 +86,7 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
                                     <!--<center><h2><span class="label label-success">Manage User</span></h2></center>-->
-                                    <button onClick="document.location = 'addUser.php';" class="btn btn-group pull-left"><span class="glyphicon glyphicon-plus"></span> Add New User</button>
+                                    <button onClick="document.location = 'addSosmed.php';" class="btn btn-group pull-left"><span class="glyphicon glyphicon-plus"></span> Add New User</button>
                                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="form_search" onsubmit="return validasi(this);">
                                         <div class="row">
                                             <div class="col-lg-4 pull-right">

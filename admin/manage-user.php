@@ -120,6 +120,8 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                                                 <td><?php echo $row['last_login']; ?></td>
                                                 <td style="text-align: center;width: 25%" colspan="3">
                                                     <?php if ($_SESSION['username'] === 'superadmin') { ?>
+                                                        <a href="editUsr.php?id=<?php echo $row[id_users]; ?>" class="btn btn-default" id="element" data-toggle="tooltip" title="edit user">
+                                                            <span class="glyphicon glyphicon-pencil"></span> Edit</a>    
                                                         <a href="?del=<?php echo $row[id_users]; ?>" class="btn btn-danger" id="element" data-toggle="tooltip" title="remove user" onClick="return confirm('Are you sure?');">
                                                             <span class="glyphicon glyphicon-remove"></span> Remove</a>
                                                     <?php } else if ($row['status'] === 'Administrator') { ?>
