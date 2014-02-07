@@ -52,7 +52,7 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                     <!-- Content -->  
                     <div class="container">
                         <?php
-                        $dataPerPage = 6;
+                        $dataPerPage = 5;
                         if (isset($_GET['page'])) {
                             $noPage = $_GET['page'];
                         }

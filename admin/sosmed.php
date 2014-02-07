@@ -6,9 +6,9 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
 } else {
     if (isset($_SESSION['password']) && isset($_SESSION['username'])) {
         if ($_GET['del']) {
-            $query = mysql_query("DELETE FROM users WHERE id_users = '$_GET[del]'");
+            $query = mysql_query("DELETE FROM sosmed WHERE id_sosmed = '$_GET[del]'");
             if ($query) {
-                echo "<script>alert('Data user has been deleted');</script>";
+                echo "<script>alert('ID sosmed has been deleted');</script>";
             }
         }
         ?>
@@ -75,7 +75,7 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                             ?>
                             <div class="alert alert-warning">
                                 <h4>There's No Data Here</h4>
-                                <p>To fill a new user click the button below</p>
+                                <p>To fill a new social click the button below</p>
                                 <p><button onClick="document.location = 'addSosmed.php';" class="btn btn-info"><span class="glyphicon glyphicon-plus"></span> Add New Sosmed</button></p>
                             </div>
                             <?php
@@ -85,8 +85,7 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                             ?>
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
-                                    <!--<center><h2><span class="label label-success">Manage User</span></h2></center>-->
-                                    <button onClick="document.location = 'addSosmed.php';" class="btn btn-group pull-left"><span class="glyphicon glyphicon-plus"></span> Add New User</button>
+                                    <button onClick="document.location = 'addSosmed.php';" class="btn btn-group pull-left"><span class="glyphicon glyphicon-plus"></span> Add New Sosmed</button>
                                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="form_search" onsubmit="return validasi(this);">
                                         <div class="row">
                                             <div class="col-lg-4 pull-right">
@@ -104,42 +103,31 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                                     <table class="table table-bordered table-hover">
                                         <thead>
                                         <th style="text-align: center;">No.</th>
-                                        <th style="text-align: center;">Username</th>
-                                        <th style="text-align: center;">Status</th>
-                                        <th style="text-align: center;">Last Login</th>
-                                        <th style="text-align: center;" colspan="3">Action</th>
+                                        <th style="text-align: center;">Social Media</th>
+                                        <th style="text-align: center;">ID</th>
+                                        <th style="text-align: center;" colspan="2">Action</th>
                                         </thead>
                                         <?php
                                         while ($row = mysql_fetch_array($query)) {
                                             ?>
                                             <tr>
                                                 <td style="text-align: center;"><?php echo $nom . "."; ?></td>
-                                                <td><?php echo $row['username']; ?></td>
-                                                <td><?php echo $row['status']; ?></td>
-                                                <td><?php echo $row['last_login']; ?></td>
-                                                <td style="text-align: center;width: 25%" colspan="3">
-                                                    <?php if ($_SESSION['username'] === 'superadmin') { ?>
-                                                        <a href="?del=<?php echo $row[id_users]; ?>" class="btn btn-danger" id="element" data-toggle="tooltip" title="remove user" onClick="return confirm('Are you sure?');">
-                                                            <span class="glyphicon glyphicon-remove"></span> Remove</a>
-                                                    <?php } else if ($row['status'] === 'Administrator') { ?>
-                                                        <a href="editUsr.php?id=<?php echo $row[id_users]; ?>" class="btn btn-default" id="element" data-toggle="tooltip" title="edit user">
-                                                            <span class="glyphicon glyphicon-pencil"></span> Edit</a>
-                                                    <?php } elseif ($row['status'] === 'User') { ?>
-                                                        <a href="editUsr.php?id=<?php echo $row[id_users]; ?>" class="btn btn-default" id="element" data-toggle="tooltip" title="edit user">
-                                                            <span class="glyphicon glyphicon-pencil"></span> Edit</a>
-                                                        <a href="?del=<?php echo $row[id_users]; ?>" class="btn btn-danger" id="element" data-toggle="tooltip" title="remove user" onClick="return confirm('Are you sure?');">
-                                                            <span class="glyphicon glyphicon-remove"></span> Remove</a>
-                                                    </td>
-                                                </tr>
-                                                <?php
-                                            }
+                                                <td><?php echo $row['name_sosmed']; ?></td>
+                                                <td><?php echo $row['ID']; ?></td>
+                                                <td style="text-align: center;width: 25%" colspan="2">
+                                                    <a href="editSosmed.php?id=<?php echo $row[id_sosmed]; ?>" class="btn btn-default" id="element" data-toggle="tooltip" title="edit user">
+                                                        <span class="glyphicon glyphicon-pencil"></span> Edit</a>
+                                                    <a href="?del=<?php echo $row[id_sosmed]; ?>" class="btn btn-danger" id="element" data-toggle="tooltip" title="remove user" onClick="return confirm('Are you sure?');">
+                                                        <span class="glyphicon glyphicon-remove"></span> Remove</a>
+                                                </td>
+                                            </tr>
+                                            <?php
                                             $nom++;
                                         }
                                         ?>  
                                     </table>
                                     <?php
-                                    $halaman = "SELECT COUNT(*) AS jumData FROM users WHERE username NOT LIKE '%$_SESSION[username]' AND username NOT LIKE
-                            '%superadmin' AND status NOT LIKE '%Superadmin' ORDER BY id_users DESC";
+                                    $halaman = "SELECT COUNT(*) AS jumData FROM sosmed ORDER BY id_sosmed DESC";
                                     $hasil = mysql_query($halaman);
                                     $data = mysql_fetch_array($hasil);
 
@@ -174,7 +162,7 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                                     if ($noPage < $jumPage)
                                         echo "<li><a href='" . $_SERVER['PHP_SELF'] . "?page=" . ($noPage + 1) . "'>Next</a></li>";
 
-                                    echo "</ul><span class='label label-info pull-right'>Total Users : $jumData</span>";
+                                    echo "</ul>";
                                     ?>
 
                                     <?php

@@ -26,9 +26,9 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage Gallery <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#"><span class="glyphicon glyphicon-picture"></span> Photo</a></li>
+                                <li><a href="galeri.php"><span class="glyphicon glyphicon-picture"></span> Photo</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-film"></span> Video</a></li>
+                                <li><a href="galeriVid.php"><span class="glyphicon glyphicon-film"></span> Video</a></li>
                             </ul>
                         </li>
                     </ul>

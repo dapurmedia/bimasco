@@ -86,7 +86,6 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                             ?>
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
-                                    <!--<center><h2><span class="label label-success">Manage User</span></h2></center>-->
                                     <button onClick="document.location = 'addUser.php';" class="btn btn-group pull-left"><span class="glyphicon glyphicon-plus"></span> Add New User</button>
                                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="form_search" onsubmit="return validasi(this);">
                                         <div class="row">
