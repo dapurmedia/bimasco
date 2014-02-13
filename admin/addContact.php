@@ -187,7 +187,11 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
             $hp = trim($_POST['hp']);
 
             $sql = mysql_query("INSERT INTO kontak SET nama_afiliasi = '$afiliasi', jenis_kantor = '$office',
+<<<<<<< HEAD
                     kota = '$city', alamat = '$address', telepon = '$phone', fax = '$fax', email = '$email',
+=======
+                    kota = '$city', alamat = '$address', telepo = '$phone', fax = '$fax', email = '$email',
+>>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                     pic = '$pic', hp = '$hp'");
             if ($sql) {
                 echo "<script>alert('New contact has been saved');</script>";

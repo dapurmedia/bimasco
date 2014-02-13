@@ -1,0 +1,64 @@
+/*
+
+        Supersized - Fullscreen Slideshow jQuery Plugin
+        Version : 3.2.7
+        Site	: www.buildinternet.com/project/supersized
+        
+        Theme 	: Shutter 1.2
+        Author	: Sam Dunn
+        Company : One Mighty Roar (www.onemightyroar.com)
+        License : MIT License / GPL License
+        
+*/
+
+/* Controls Bar
+----------------------------*/
+#controls-wrapper {
+    height:42px;
+    bottom:20%;
+    right:0;
+    z-index:4;
+    position:absolute;
+    position:fixed;
+}
+#controls {
+    overflow:hidden;
+    height:100%;
+    position:relative;
+    text-align:left;
+    z-index:5;
+}
+
+ul#slide-list {
+    padding:15px 10px 15px 15px;
+    float:right;
+    position:absolute;
+    right:10%;	
+    background-image:url(../images/menu_bg.png);
+    -moz-border-radius-bottomleft: 20px;
+    border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    border-top-left-radius: 20px;
+
+}
+ul#slide-list li {
+    list-style:none;
+    width:12px;
+    height:12px;
+    float:left;
+    margin:5px 5px 0 0;
+}
+ul#slide-list li.current-slide a, ul#slide-list li.current-slide a:hover {
+    background-position:0 0px;
+}
+ul#slide-list li a {
+    display:block;
+    width:12px;
+    height:12px;
+    background:url('../images/nav-dot.png') no-repeat 0 -24px;
+}
+ul#slide-list li a:hover {
+    background-position:0 -12px;
+    cursor:pointer;
+}
+

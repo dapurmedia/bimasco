@@ -65,7 +65,11 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                             $nom = ($noPage - 1) * $dataPerPage + 1;
                         }
 
+<<<<<<< HEAD
                         $query = mysql_query("SELECT * FROM `kontak` ORDER BY jenis_kantor ASC LIMIT $offset, $dataPerPage");
+=======
+                        $query = mysql_query("SELECT * FROM `kontak` ORDER BY id_kontak DESC LIMIT $offset, $dataPerPage");
+>>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
 
                         //loop through fetched data
                         $paging = mysql_num_rows($query);
@@ -85,8 +89,13 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                             ?>
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
+<<<<<<< HEAD
                                     <button onClick="document.location = 'addContact.php';" class="btn btn-group"><span class="glyphicon glyphicon-plus"></span> Add New Contact</button>
 <!--                                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="form_search" onsubmit="return validasi(this);">
+=======
+                                    <button onClick="document.location = 'addContact.php';" class="btn btn-group pull-left"><span class="glyphicon glyphicon-plus"></span> Add New Contact</button>
+                                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="form_search" onsubmit="return validasi(this);">
+>>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                                         <div class="row">
                                             <div class="col-lg-4 pull-right">
                                                 <div class="input-group">
@@ -97,7 +106,11 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                                                 </div>
                                             </div>
                                         </div>
+<<<<<<< HEAD
                                     </form>-->
+=======
+                                    </form>
+>>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                                 </div>
                                 <div class="panel-body">
                                     <table class="table table-bordered table-hover">
@@ -112,6 +125,7 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                                             ?>
                                             <tr>
                                                 <td style="text-align: center;"><?php echo $nom . "."; ?></td>
+<<<<<<< HEAD
                                                 <td><strong><?php echo $row['jenis_kantor'] . "<br/>"; ?></strong></td>
                                                 <td>Affiliation : <?php echo $row['nama_afiliasi'] . "<br/>"; ?>
                                                     City : <?php echo $row['kota'] . "<br/>"; ?>
@@ -120,6 +134,16 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                                                     Fax. : <?php echo $row['fax'] . "<br/>"; ?>
                                                     Email : <?php echo $row['email'] . "<br/>"; ?>
                                                     PIC : <?php echo $row['pic'] . "<br/>"; ?>
+=======
+                                                <td><strong><?php echo $row['jenis_kantor'] ."<br/>"; ?></strong></td>
+                                                <td>Affiliation : <?php echo $row['nama_afiliasi'] ."<br/>"; ?>
+                                                    City : <?php echo $row['kota'] ."<br/>"; ?>
+                                                    Address : <?php echo $row['alamat'] ."<br/>"; ?>
+                                                    Phone : <?php echo $row['telepon'] ."<br/>"; ?>
+                                                    Fax. : <?php echo $row['fax'] ."<br/>"; ?>
+                                                    Email : <?php echo $row['email'] ."<br/>"; ?>
+                                                    PIC : <?php echo $row['pic'] ."<br/>"; ?>
+>>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                                                     Mobile Phone : <?php echo $row['hp']; ?></td>
                                                 <td style="text-align: center;width: 25%" colspan="2">
                                                     <a href="editContact.php?id=<?php echo $row[id_kontak]; ?>" class="btn btn-default" id="element" data-toggle="tooltip" title="edit user">
@@ -154,11 +178,19 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                                     for ($page = 1; $page <= $jumPage; $page++) {
                                         if ((($page >= $noPage - 3) && ($page <= $noPage + 3)) || ($page == 1) || ($page == $jumPage)) {
                                             if (($showPage == 1) && ($page != 2))
+<<<<<<< HEAD
                                                 echo "<li class='disabled'><a href='#'>...</a></li>";
                                             if (($showPage != ($jumPage - 1)) && ($page == $jumPage))
                                                 echo "<li class='disabled'><a href='#'>...</a></li>";
                                             if ($page == $noPage)
                                                 echo " <li class='active'><a href='#'>" . $page . "</a></li>";
+=======
+                                                echo "...";
+                                            if (($showPage != ($jumPage - 1)) && ($page == $jumPage))
+                                                echo "...";
+                                            if ($page == $noPage)
+                                                echo " <li><b>" . $page . "</b></li>";
+>>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                                             else
                                                 echo " <li><a href='" . $_SERVER['PHP_SELF'] . "?page=" . $page . "'>" . $page . "</a></li> ";
                                             $showPage = $page;

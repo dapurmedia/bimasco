@@ -1,0 +1,367 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+    color:#808080;
+    overflow: hidden;
+}
+p, ul, ol, dl, table, fieldset, blockquote, pre, code {
+}
+/* headings
+------------------------------------------------------*/
+h1, h2, h3, h4, h5 {
+    color: #FFFFFF;
+    font: 60px 'Oswald', 'Arial-black',sans-serif;
+    padding-bottom:10px;
+    position: relative;		
+}
+
+h1, h2, h3 {
+    line-height:60px;	
+}
+h4, h5, h6 {
+    line-height:30px;	
+}
+h1 {
+    font-size: 40px;
+    font-weight:700;
+}
+h2 {
+    font-size:35px;
+    font-weight:600;
+}
+h3 {
+    font-size: 22px;
+    font-weight:400;
+}
+h4 {
+    font-size: 18px;
+    font-weight:300;
+}
+h5 {
+    font-size: 16px;
+    font-weight:300;
+}
+h6 {
+    font-size: 11px;
+    font-weight:300;
+}
+hr {
+    border: 0 #ccc solid;
+    border-top-width: 1px;
+    clear: both;
+    height: 0;
+}
+hr {
+    border: 1px solid #eee;
+    width: 100%;
+    color: #eee;
+    height: 1px;
+}
+p {
+    color:#808080;
+
+    padding-bottom:10px;
+    clear:both;
+}
+/* imgage alignment
+----------------------------------------------------------------------------------------------------*/
+.alignright {
+    float: right;
+    margin: 3px 0 0px 10px;
+    width:auto;
+}
+.alignleft {
+    float: left;
+    margin:0px 20px 0px 0px;
+    width:auto;
+}
+.align {
+    float: left;
+    margin: 0 10px 0px 0;
+    width:auto;
+}
+a img {
+    border:none;
+}
+img {
+    max-width:100%;
+    height:auto;
+}
+*|*:focus {
+    outline: none;
+}
+
+a:link, a:visited, a:link {
+    color: #f25c02;
+    text-decoration:none;
+    outline:none;
+}
+a:hover {
+    color:#80b600;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    width: 100%;
+    overflow:hidden;
+}
+a.read_more {
+    color:#fff;
+    font:20px/20px 'oswald', 'Arial-black',sans-serif;
+    margin-top:2px;
+    float:left;
+}
+
+.contact_info{
+    padding:10px 30px 0px 60px;
+    position:absolute;
+    top:15px;
+    right:20px;
+    border-radius:10px;
+    background-image: url(../images/phone.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.contact_info h3{
+    font-size:1.0em;
+    text-shadow: 1px 1px 1px #000;
+}
+/*end common/genral style*/
+.intro{
+    /*margin-top:30px;*/
+    text-shadow: 1px 1px 2px #000;
+}
+.intro span{
+    color:#f25c02;
+}
+
+#container {
+    position:relative;
+    top:50px;
+    margin:0 auto;
+}
+#content_wrapper {
+    display:none;
+}
+.content {
+    background:url(../images/content_img.png) repeat scroll 0 0 transparent;
+    padding:20px 20px 20px 20px;
+    left:10%;
+    margin-top:30px;
+    display:block;
+    min-height:355px;
+    overflow:hidden;
+}
+
+.logo {
+    margin-bottom:10px;
+    display:block;
+}
+.logo h1 a, .logo h1 a:visited{
+    font-size:2em;
+    color:#fff;
+    text-shadow: 2px 2px 4px #000;
+}
+.jqueryslidemenu, #container, #content > ul > li {
+    width:1000px;
+}
+
+
+#content > ul > li {
+    display: block;
+    position:absolute;
+    float:left !important;
+    margin:0px;
+    padding:0px;
+    list-style:none;
+
+}
+
+.close_panel {
+    background-color:#f25c02;
+    background-image:url(../images/close_icon.png);
+    background-repeat:no-repeat;
+    background-position:center center;
+    clear: both;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: right;
+    position:absolute;
+    right:0px;
+    top:0px;
+    padding:15px;
+}
+
+.close_panel:hover{
+    background-color:#333333;
+}
+/*about us start*/
+.space{
+    margin-bottom:6px;
+}
+/*about us end*/
+
+
+ul.list{
+    list-style:none;
+}
+
+ul.list li{
+    margin-bottom:5px;
+    padding-bottom:5px;
+}
+
+span.view_location,span.view_address{
+    margin-top:5px;
+    display:block;
+    margin-bottom:20px;
+}
+
+span.view_location span{
+    display:block;
+    font-weight:bold;
+    color:#fff;
+}
+
+span.view_address span{
+    display:block;
+    padding-bottom:2px;
+    margin-bottom:2px;
+}
+
+span.view_address a{
+    color:#006633;
+}
+
+span.view_address a:hover{
+    color:#eee;
+}
+
+
+/*forms css*/
+#form1 label{
+    float:left;
+    margin-bottom:15px;
+    position:relative;
+}
+
+#form1 input,#form1 textarea{
+    width:200px;
+    background:#0d0801;
+    border:1px #414141 solid;
+    float:left;
+    font:12px Arial,Helvetica,sans-serif;
+    color:#7e716e;
+    padding:9px 10px;
+}
+
+#form1 textarea{
+    width:280px;
+    height:48px;
+    resize:none;
+}
+
+#form1 .btns{
+    padding-top:16px;
+}
+
+#form1 .btns a{
+    margin-right:21px;
+}
+
+#form1 .error,#form1 .empty{
+    position:absolute;
+    right:2px;
+    top:2px;
+    font:10px Arial, Helvetica, sans-serif;
+    color:#fff;
+}
+
+.btn {
+    background: none repeat scroll 0 0 #5a5a5a;
+    color: #fff;
+    float: left;
+    font:12px/12px 'impact', 'Arial-black',sans-serif;
+    padding:10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Pricing table*/
+table.price_table{
+    color:#eee;
+}
+
+table.price_table th{
+    background-color:#101010;
+    font-weight:bold;
+}
+table.price_table td{
+    background-color:#202020;
+    border:1px solid #000;
+}
+table.price_table th, table.price_table td{
+    padding:10px;
+}
+
+
+/* Contaqct section */
+#response{
+    color:#ff6c00;
+    margin-bottom:20px;
+
+}
+#contact-form p {
+    margin:0px;
+    padding:0px;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 5px;
+    font-family: Helvetica, sans-serif;
+    margin: 10px 0px 10px 0px;
+    border:1px solid #333;
+    background-color:#222;
+    color:#666666;
+}
+
+#contact-form textarea {
+    background-color:#222;
+}
+
+#contact-form textarea:focus, #contact-form input:focus {
+    border:1px solid #ff6c00;
+}
+
+#contact-form p input#submit {
+    background-color:#4d4c47;
+    border:1px solid #2b2b2b;
+    padding:5px;
+    border-radius:5px;
+    color:#fff;
+    font-family: 'Oswald', sans-serif;
+    width:100px;
+    font-size:12px;
+}
+
+#contact-form p input#submit:hover{
+    background-color:#ff6c00;
+    border:1px solid #679202;
+    cursor:pointer;
+}
+
+label {
+    float: left;
+    width:70px;
+    padding-top: 5px;
+    font-family: 'Oswald', sans-serif;	
+}
+.vaidate_error{
+    border:1px solid #FF0000!important;
+}
