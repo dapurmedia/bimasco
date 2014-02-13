@@ -85,13 +85,8 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                             ?>
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
-<<<<<<< HEAD
                                     <button onClick="document.location = 'addService.php';" class="btn btn-group"><span class="glyphicon glyphicon-plus"></span> Add New Service</button>
 <!--                                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="form_search" onsubmit="return validasi(this);">
-=======
-                                    <button onClick="document.location = 'addService.php';" class="btn btn-group pull-left"><span class="glyphicon glyphicon-plus"></span> Add New Service</button>
-                                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="form_search" onsubmit="return validasi(this);">
->>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                                         <div class="row">
                                             <div class="col-lg-4 pull-right">
                                                 <div class="input-group">
@@ -102,11 +97,7 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                                                 </div>
                                             </div>
                                         </div>
-<<<<<<< HEAD
                                     </form>-->
-=======
-                                    </form>
->>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                                 </div>
                                 <div class="panel-body">
                                     <table class="table table-bordered table-hover">
@@ -147,22 +138,15 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                                     $jumPage = ceil($jumData / $dataPerPage);
 
                                     // menampilkan link previous
-<<<<<<< HEAD
                                     echo "<ul class='pagination'>";
                                     if ($noPage > 1)
                                         echo "<li><a href='" . $_SERVER['PHP_SELF'] . "?page=" . ($noPage - 1) . "'>Prev</a></li>";
-=======
-//                                    echo "<ul class='pagination'><li>";
-                                    if ($noPage > 1)
-                                        echo "<a href='" . $_SERVER['PHP_SELF'] . "?page=" . ($noPage - 1) . "'>Prev</a>";
->>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
 
                                     // memunculkan nomor halaman dan linknya
 
                                     for ($page = 1; $page <= $jumPage; $page++) {
                                         if ((($page >= $noPage - 3) && ($page <= $noPage + 3)) || ($page == 1) || ($page == $jumPage)) {
                                             if (($showPage == 1) && ($page != 2))
-<<<<<<< HEAD
                                                 echo "<li class='disabled'><a href='#'>...</a></li>";
                                             if (($showPage != ($jumPage - 1)) && ($page == $jumPage))
                                                 echo "<li class='disabled'><a href='#'>...</a></li>";
@@ -170,30 +154,15 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                                                 echo " <li class='active'><a href='#'>" . $page . "</a></li>";
                                             else
                                                 echo " <li><a href='" . $_SERVER['PHP_SELF'] . "?page=" . $page . "'>" . $page . "</a></li> ";
-=======
-                                                echo "...";
-                                            if (($showPage != ($jumPage - 1)) && ($page == $jumPage))
-                                                echo "...";
-                                            if ($page == $noPage)
-                                                echo " <b>" . $page . "</b>";
-                                            else
-                                                echo " <a href='" . $_SERVER['PHP_SELF'] . "?page=" . $page . "'>" . $page . "</a> ";
->>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                                             $showPage = $page;
                                         }
                                     }
 
                                     // menampilkan link next
                                     if ($noPage < $jumPage)
-<<<<<<< HEAD
                                         echo "<li><a href='" . $_SERVER['PHP_SELF'] . "?page=" . ($noPage + 1) . "'>Next</a></li>";
 
                                     echo "</ul><span class='label label-info pull-right'>Total Service : $jumData</span>";
-=======
-                                        echo "<a href='" . $_SERVER['PHP_SELF'] . "?page=" . ($noPage + 1) . "'>Next</a>";
-
-                                    echo "<span class='label label-info pull-right'>Total Service : $jumData</span>";
->>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                                     ?>
 
                                     <?php

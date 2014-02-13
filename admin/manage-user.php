@@ -85,15 +85,9 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                         elseif ($paging != 0) {
                             ?>
                             <div class="panel panel-primary">
-<<<<<<< HEAD
                                     <div class="panel-heading">
                                     <button onClick="document.location = 'addUser.php';" class="btn btn-group"><span class="glyphicon glyphicon-plus"></span> Add New User</button>
             <!--                                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="form_search" onsubmit="return validasi(this);">
-=======
-                                <div class="panel-heading">
-                                    <button onClick="document.location = 'addUser.php';" class="btn btn-group pull-left"><span class="glyphicon glyphicon-plus"></span> Add New User</button>
-                                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="form_search" onsubmit="return validasi(this);">
->>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                                         <div class="row">
                                             <div class="col-lg-4 pull-right">
                                                 <div class="input-group">
@@ -104,11 +98,7 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                                                 </div>
                                             </div>
                                         </div>
-<<<<<<< HEAD
                                     </form>-->
-=======
-                                    </form>
->>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                                 </div>
                                 <div class="panel-body">
                                     <table class="table table-bordered table-hover">
@@ -171,19 +161,11 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                                     for ($page = 1; $page <= $jumPage; $page++) {
                                         if ((($page >= $noPage - 3) && ($page <= $noPage + 3)) || ($page == 1) || ($page == $jumPage)) {
                                             if (($showPage == 1) && ($page != 2))
-<<<<<<< HEAD
                                                 echo "<li class='disabled'><a href='#'>...</a></li>";
                                             if (($showPage != ($jumPage - 1)) && ($page == $jumPage))
                                                 echo "<li class='disabled'><a href='#'>...</a></li>";
                                             if ($page == $noPage)
                                                 echo " <li class='active'><a href='#'>" . $page . "</a></li>";
-=======
-                                                echo "...";
-                                            if (($showPage != ($jumPage - 1)) && ($page == $jumPage))
-                                                echo "...";
-                                            if ($page == $noPage)
-                                                echo " <li><b>" . $page . "</b></li>";
->>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                                             else
                                                 echo " <li><a href='" . $_SERVER['PHP_SELF'] . "?page=" . $page . "'>" . $page . "</a></li> ";
                                             $showPage = $page;

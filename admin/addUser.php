@@ -26,24 +26,16 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                         load(1);
                         $('#element').tooltip('show');
                     });
-<<<<<<< HEAD
                     $('#loading-example-btn').click(function() {
                         var btn = $(this);
                         btn.button('loading');
                     });
                     
-=======
-
->>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                     function validasi(form) {
                         valid = true;
                         var t = document.getElementById('email');
                         var x = t.value.indexOf('@');
                         var y = t.value.lastIndexOf('.');
-<<<<<<< HEAD
-=======
-
->>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                         if (form.username.value.trim() === "") {
                             alert("Please enter a Title.");
                             form.username.focus();
@@ -127,11 +119,7 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
-<<<<<<< HEAD
                                         <button name="saveUser" type="submit" class="btn btn-success" id="loading-example-btn" data-loading-text="Loading...">Save</button>
-=======
-                                        <button name="saveUser" type="submit" class="btn btn-success">Save</button>
->>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                                         <input type="button" onClick="document.location = 'manage-user.php';" class="btn btn-default" value="Cancel">
                                     </div>
                                 </div>

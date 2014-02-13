@@ -63,21 +63,12 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                                     <label for="inputPassword3" class="col-sm-2 control-label">Status</label>
                                     <div class="col-sm-2">
                                         <select class="form-control" name="sosmed" required>
-<<<<<<< HEAD
                                             <option value="0">- Choose -</option>
                                             <option value="http://www.facebook.com/"> Facebook</option>
                                             <option value="http://www.twitter.com/"> Twitter</option>
                                             <option value="http://www.google.com/"> Gmail</option>
                                             <option value="bbm"> BBM</option>
                                             <option value="ym"> YM</option>
-=======
-                                            <option name="0">- Choose -</option>
-                                            <option name="facebook">Facebook</option>
-                                            <option name="twitter">Twitter</option>
-                                            <option name="gmail">Gmail</option>
-                                            <option name="youtube">Youtube</option>
-                                            <option value="ym">YM</option>
->>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                                         </select>
                                     </div>
                                 </div>
@@ -104,10 +95,7 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
         if (isset($_POST['saveSosmed'])) {
             $sosmed = $_POST['sosmed'];
             $id = trim($_POST['id']);
-<<<<<<< HEAD
             $logo = $_POST[''];
-=======
->>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
 
             // check duplicate username
             $sql = mysql_query("SELECT * FROM sosmed");
@@ -140,7 +128,6 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
             if ($stop == 1) {
                 echo "<script>alert('ID already exist, use another ID')</script>";
             } else {
-<<<<<<< HEAD
                 if ($sosmed == 'http://www.facebook.com/') {
                     $logo = 'facebook';
                 } else if ($sosmed == 'http://www.twitter.com/') {
@@ -153,9 +140,6 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                     $logo = 'ym';
                 }
                 $sql = mysql_query("INSERT INTO sosmed SET ID = '$id', name_sosmed = '$sosmed', logo = '$logo'");
-=======
-                $sql = mysql_query("INSERT INTO sosmed SET ID = '$id', name_sosmed = '$sosmed'");
->>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
             }
             if ($sql) {
                 echo "<script>alert('New social media has been saved');</script>";

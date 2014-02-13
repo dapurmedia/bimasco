@@ -201,13 +201,8 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
             $hp = trim($_POST['hp']);
 
             if ($office == 0) {
-<<<<<<< HEAD
                 $sql = mysql_query("UPDATE kontak SET nama_afiliasi = '$afiliasi', kota = '$city', 
                     alamat = '$address', telepon = '$phone', fax = '$fax', email = '$email',
-=======
-                $sql = mysql_query("UPDATE kontak SET nama_afiliasi = '$afiliasi', alamat = '$address', 
-                    telepon = '$phone', fax = '$fax', email = '$email',
->>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                     pic = '$pic', hp = '$hp' WHERE id_kontak = '$id_kontak'");
                 if ($sql) {
                     echo "<script>alert('Data kontak has been updated');</script>";

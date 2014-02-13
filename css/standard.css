@@ -157,7 +157,7 @@ a:hover {
 } /* Footer Text and Link Color Default #fff */
 
 #footer a:hover {
-    color: royalblue;    
+    color:#e7e7e7;
 } /* Footer Link Hover Color Default #e7e7e7 */
 
 .sf-menu a, .sf-menu a:visited  { 
@@ -314,7 +314,7 @@ ul.sub-navigation li a {
 }
 
 .featured-text {
-    width:550px; 
+    width:555px; 
     float:right; 
     margin-right:50px; 
     font-size: 1.1em; 

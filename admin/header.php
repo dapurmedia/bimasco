@@ -19,13 +19,8 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="manage-user.php">Manage User</a></li>
-<<<<<<< HEAD
                         <li><a href="about_us.php">Manage About Us</a></li>
                         <li><a href="menu.php">Manage Menu</a></li>
-=======
-                        <li><a href="menu.php">Manage Menu</a></li>
-                        <li><a href="about_us.php">Manage About Us</a></li>
->>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
                         <li><a href="services.php">Manage Service</a></li>
                         <li><a href="contact.php">Manage Contact</a></li>
                         <li class="dropdown">
@@ -52,9 +47,5 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
         </div>
         <?php
     }
-<<<<<<< HEAD
 }
 ?>
-=======
-}?>
->>>>>>> 16b127ddcd9ca20f84623b75b6f75a0e16df8f10
